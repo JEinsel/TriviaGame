@@ -1,0 +1,18 @@
+#title {
+    text-align: center;
+    min-height: 60px;
+}
+#question,
+#answerOne,
+#answerTwo,
+#answerThree,
+#answerFour {
+    text-align: center;
+    /* align-content: center; */
+}
+
+body {
+    background-image: url("/assets/images/cool-background.png");
+    background-repeat: no-repeat;
+    background-size: 100%, 100%
+}
