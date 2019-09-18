@@ -2,12 +2,14 @@
     text-align: center;
     min-height: 60px;
 }
+#timer,
 #question,
 #answerOne,
 #answerTwo,
 #answerThree,
 #answerFour {
     text-align: center;
+    font-size:150%;
     /* align-content: center; */
 }
 
