@@ -4,10 +4,11 @@
 }
 #timer,
 #question,
-#answerOne,
-#answerTwo,
-#answerThree,
-#answerFour {
+#answer1,
+#answer2,
+#answer3,
+#answer4,
+#start {
     text-align: center;
     font-size:150%;
     /* align-content: center; */
