@@ -13,8 +13,8 @@ var timeInterval = window.setInterval(function () {
         clearTimeout(timeInterval)
     } else if (timerTime === 0 && questionBody === 11) {
         console.log("Test")
-        clearTimeout(timeInterval)
         alert("Number of correct guesses " + correct + " Number of wrong guesses " + wrong)
+        clearTimeout(timeInterval)
     }
     else if (timerTime === 0 && questionBody !== 0) {
         questionBody++
@@ -310,7 +310,8 @@ $(document).on("click", "#answer1", function () {
             questionBody++
             update()
         case 11:
-
+        questionBody=0
+        update()
         default:
             break;
     }
