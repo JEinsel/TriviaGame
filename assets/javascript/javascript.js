@@ -1,23 +1,28 @@
 var questionBody = 0
-var timerTime = 5
+var timerTime = 0
 var correct = 0
 var wrong = 0
 // var counter = 0
- 
+
 var timeInterval = window.setInterval(function () {
-                timerTime--
-                document.getElementById('timer').innerHTML = timerTime
-                
-                if (timerTime === 0 && questionBody ===0) {
-                    console.log("Test")
-                    clearTimeout(timeInterval)
-                }
-                 else if (timerTime === 0 && questionBody !== 0) {
-                    questionBody++
-                    timerTime = 15
-                    update()
-                }
-            }, 1000);
+    timerTime--
+    document.getElementById('timer').innerHTML = timerTime
+
+    if (timerTime === 0 && questionBody === 0) {
+        console.log("Test")
+        clearTimeout(timeInterval)
+    } else if (timerTime === 0 && questionBody === 11) {
+        console.log("Test")
+        clearTimeout(timeInterval)
+        alert("Number of correct guesses " + correct + " Number of wrong guesses " + wrong)
+    }
+    else if (timerTime === 0 && questionBody !== 0) {
+        questionBody++
+        timerTime = 15
+        wrong++
+        update()
+    }
+}, 1000);
 
 
 // var timeInterval
@@ -73,55 +78,82 @@ function update() {
 
     }
     else if (questionBody === 1) {
-        question.innerHTML = `Who painted the mona Lisa?`
+        question.innerHTML = `1. Who painted the mona Lisa?`
         answerOne.innerHTML = `Leonardo da Vinci`
         answerTwo.innerHTML = `Giovanni Bellini`
         answerThree.innerHTML = `Pablo Picasso`
         answerFour.innerHTML = `Giovanni Bellini`
     }
     else if (questionBody === 2) {
-        question.innerHTML = `How many paintings did Vincent Van Gogh sell?`
+        question.innerHTML = `2. How many paintings did Vincent Van Gogh sell?`
         answerOne.innerHTML = `52`
         answerTwo.innerHTML = `900`
         answerThree.innerHTML = `26`
         answerFour.innerHTML = `1`
     }
     else if (questionBody === 3) {
-        question.innerHTML = ``
-        answerOne.innerHTML = ``
-        answerTwo.innerHTML = ``
-        answerThree.innerHTML = ``
-        answerFour.innerHTML = ``
+        question.innerHTML = `3. Who painted 'The Scream'`
+        answerOne.innerHTML = `Otto Meuller`
+        answerTwo.innerHTML = `Edvard Munch`
+        answerThree.innerHTML = `Wassily Kandinsky`
+        answerFour.innerHTML = `Vincent Van Gogh`
     }
     else if (questionBody === 4) {
-        question.innerHTML = ``
-        answerOne.innerHTML = ``
-        answerTwo.innerHTML = ``
-        answerThree.innerHTML = ``
-        answerFour.innerHTML = ``
+        question.innerHTML = `4. Who painted the ceiling of the Sistine Chapel?`
+        answerOne.innerHTML = `Michelangelo`
+        answerTwo.innerHTML = `Raphael`
+        answerThree.innerHTML = `Sandro Botticelli`
+        answerFour.innerHTML = `Ambrogio Lorenzetti`
     }
     else if (questionBody === 5) {
-        question.innerHTML = ``
-        answerOne.innerHTML = ``
-        answerTwo.innerHTML = ``
-        answerThree.innerHTML = ``
-        answerFour.innerHTML = ``
+        question.innerHTML = ` 5.What artist sold a portrait of Leonardo DiCaprio for more than $1 million?`
+        answerOne.innerHTML = `Evan Penny`
+        answerTwo.innerHTML = `Bernard Pras`
+        answerThree.innerHTML = `Elizabeth Peyton`
+        answerFour.innerHTML = `Nikki Rosato`
     }
     else if (questionBody === 6) {
-        question.innerHTML = ``
-        answerOne.innerHTML = ``
-        answerTwo.innerHTML = ``
-        answerThree.innerHTML = ``
-        answerFour.innerHTML = ``
+        question.innerHTML = `6. How old is the earliest known human artwork?`
+        answerOne.innerHTML = `1.84 million years old.`
+        answerTwo.innerHTML = `100,000 years old.`
+        answerThree.innerHTML = `27,000 years old.`
+        answerFour.innerHTML = `6,000 years old.`
     }
     else if (questionBody === 7) {
-        question.innerHTML = ``
-        answerOne.innerHTML = ``
-        answerTwo.innerHTML = ``
-        answerThree.innerHTML = ``
-        answerFour.innerHTML = ``
+        question.innerHTML = `7. How long did it take Leonardo da Vinci to paint the Mona Lisa's lips?`
+        answerOne.innerHTML = `12 weeks`
+        answerTwo.innerHTML = `12 months`
+        answerThree.innerHTML = `12 years`
+        answerFour.innerHTML = `12 days`
     }
-
+    else if (questionBody === 8) {
+        question.innerHTML = `8. Vermillion is a shade of what color?`
+        answerOne.innerHTML = `Yellow`
+        answerTwo.innerHTML = `Blue`
+        answerThree.innerHTML = `Green`
+        answerFour.innerHTML = `Red`
+    }
+    else if (questionBody === 9) {
+        question.innerHTML = `9. Any color plus white is a ___`
+        answerOne.innerHTML = `Value`
+        answerTwo.innerHTML = `Tone`
+        answerThree.innerHTML = `Tint`
+        answerFour.innerHTML = `Shade`
+    }
+    else if (questionBody === 10) {
+        question.innerHTML = `What artist's work has been stolen more then any other's?`
+        answerOne.innerHTML = `Pablo Picasso`
+        answerTwo.innerHTML = `Leonardo Da Vinci`
+        answerThree.innerHTML = `Rembrandt`
+        answerFour.innerHTML = `Edvard Munch`
+    }
+    else if (questionBody === 11) {
+        question.innerHTML = `Do you want to play again?`
+        answerOne.innerHTML = `Play again.`
+        answerTwo.innerHTML = ` `
+        answerThree.innerHTML = ` `
+        answerFour.innerHTML = ` `
+    }
 }
 
 // function startTimer() {
@@ -211,8 +243,8 @@ $(document).on("click", "#answer1", function () {
             //         update()
             //     }
             // }, 1000);
-            timerTime=15
-            setInterval(timeInterval,1000)
+            timerTime = 15
+            setInterval(timeInterval, 1000)
             questionBody++
             update()
             break;
@@ -220,38 +252,65 @@ $(document).on("click", "#answer1", function () {
             correctAnswer()
             timerTime = 15
             questionBody++
-            correct++
             update()
+            correct++
             break;
         case 2:
-
+            timerTime = 15
+            questionBody++
+            update()
             break;
 
         case 3:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 4:
-
+            correct++
+            correctAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 5:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 6:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 7:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 8:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 9:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 10:
-
+            correct++
+            correctAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 11:
 
-        case 12:
-
-        case 13:
-
-        case 14:
-
-        case 15:
         default:
             break;
     }
@@ -265,37 +324,60 @@ $(document).on("click", "#answer2", function () {
             wrong++
             update()
             break;
-
-
         case 2:
             wrongAnswer()
+            wrong++
+            update()
             break
         case 3:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 4:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 5:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 6:
-
+            correct++
+            correctAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 7:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 8:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 9:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 10:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 11:
-
-        case 12:
-
-        case 13:
-
-        case 14:
-
-        case 15:
-
         default:
             break;
     }
@@ -311,32 +393,59 @@ $(document).on("click", "#answer3", function () {
 
 
         case 2:
+            timerTime = 15
+            questionBody++
+            update()
             break
         case 3:
-
+            correctAnswer()
+            correct++
+            timerTime = 15
+            questionBody++
+            update()
         case 4:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 5:
-
+            correct++
+            correctAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 6:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 7:
-
+            correct++
+            correctAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 8:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 9:
-
+            correct++
+            correctAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 10:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 11:
-
-        case 12:
-
-        case 13:
-
-        case 14:
-
-        case 15:
         default:
             break;
     }
@@ -345,42 +454,64 @@ $(document).on("click", "#answer3", function () {
 $(document).on("click", "#answer4", function () {
     switch (questionBody) {
         case 1:
+            wrongAnswer()
             questionBody++
             wrong++
             update()
             break;
-
-
         case 2:
             correct++
-
+            timerTime = 15
+            questionBody++
+            update()
             break
         case 3:
-
+            wrongAnswer()
+            wrong++
+            timerTime = 15
+            questionBody++
+            update()
         case 4:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 5:
-
+            timerTime = 15
+            questionBody++
+            update()
         case 6:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 7:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 8:
-
+            correct++
+            correctAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 9:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 10:
-
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
         case 11:
-
-        case 12:
-
-        case 13:
-
-        case 14:
-
-        case 15:
-
         default:
             break;
     }
