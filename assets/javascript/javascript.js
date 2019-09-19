@@ -3,6 +3,22 @@ var timerTime = 5
 var correct = 0
 var wrong = 0
 // var counter = 0
+ 
+var timeInterval = window.setInterval(function () {
+                timerTime--
+                document.getElementById('timer').innerHTML = timerTime
+                
+                if (timerTime === 0 && questionBody ===0) {
+                    console.log("Test")
+                    clearTimeout(timeInterval)
+                }
+                 else if (timerTime === 0 && questionBody !== 0) {
+                    questionBody++
+                    timerTime = 15
+                    update()
+                }
+            }, 1000);
+
 
 // var timeInterval
 
@@ -30,12 +46,10 @@ var answerFour = document.getElementById('answer4')
 function correctAnswer() {
     alert("Correct!")
 }
-clearTimeout(correctAnswer, 500)
 
 function wrongAnswer() {
     alert("Wrong!")
 }
-clearTimeout(wrongAnswer, 500)
 
 
 // $("#timer").html(timerTime)
@@ -166,37 +180,39 @@ $(document).on("click", "#start", function () {
 
 // setInterval(ifTimer(), 1000);
 
-setInterval(function(){
-    console.log("1000 ms")
-    switch (timerTime) {
-        case 0:
-                clearTimeout(timeInterval)
-                timerTime = 15
-                questionBody++
-                update()
-            break;
-    
-        default:
-            break;
-    }
-   
-}, 1000)
+// setInterval(function () {
+//     console.log("1000 ms")
+//     switch (timerTime) {
+//         case 0:
+//             clearTimeout(timeInterval)
+//             timerTime = 15
+//             questionBody++
+//             update()
+//             break;
+
+//         default:
+//             break;
+//     }
+
+// }, 1000)
 
 $(document).on("click", "#answer1", function () {
     console.log("Button one clicked")
 
     switch (questionBody) {
         case 0:
-            var timeInterval = window.setInterval(function () {
-                timerTime--
-                document.getElementById('timer').innerHTML = timerTime
-                if (timerTime === 0) {
-                    clearTimeout(timeInterval)
-                    question++
-                    timerTime=15
-                    update()
-                }
-            }, 1000);
+            // var timeInterval = window.setInterval(function () {
+            //     timerTime--
+            //     document.getElementById('timer').innerHTML = timerTime
+            //     if (timerTime === 0) {
+            //         clearTimeout(timeInterval)
+            //         question++
+            //         timerTime = 15
+            //         update()
+            //     }
+            // }, 1000);
+            timerTime=15
+            setInterval(timeInterval,1000)
             questionBody++
             update()
             break;
@@ -210,6 +226,32 @@ $(document).on("click", "#answer1", function () {
         case 2:
 
             break;
+
+        case 3:
+
+        case 4:
+
+        case 5:
+
+        case 6:
+
+        case 7:
+
+        case 8:
+
+        case 9:
+
+        case 10:
+
+        case 11:
+
+        case 12:
+
+        case 13:
+
+        case 14:
+
+        case 15:
         default:
             break;
     }
@@ -226,7 +268,33 @@ $(document).on("click", "#answer2", function () {
 
 
         case 2:
+            wrongAnswer()
             break
+        case 3:
+
+        case 4:
+
+        case 5:
+
+        case 6:
+
+        case 7:
+
+        case 8:
+
+        case 9:
+
+        case 10:
+
+        case 11:
+
+        case 12:
+
+        case 13:
+
+        case 14:
+
+        case 15:
 
         default:
             break;
@@ -244,7 +312,31 @@ $(document).on("click", "#answer3", function () {
 
         case 2:
             break
+        case 3:
 
+        case 4:
+
+        case 5:
+
+        case 6:
+
+        case 7:
+
+        case 8:
+
+        case 9:
+
+        case 10:
+
+        case 11:
+
+        case 12:
+
+        case 13:
+
+        case 14:
+
+        case 15:
         default:
             break;
     }
@@ -263,6 +355,32 @@ $(document).on("click", "#answer4", function () {
             correct++
 
             break
+        case 3:
+
+        case 4:
+
+        case 5:
+
+        case 6:
+
+        case 7:
+
+        case 8:
+
+        case 9:
+
+        case 10:
+
+        case 11:
+
+        case 12:
+
+        case 13:
+
+        case 14:
+
+        case 15:
+
         default:
             break;
     }
