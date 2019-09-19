@@ -1,5 +1,5 @@
 var questionBody = 0
-var timerTime = 0
+var timerTime = 15
 var correct = 0
 var wrong = 0
 // var counter = 0
@@ -310,8 +310,8 @@ $(document).on("click", "#answer1", function () {
             questionBody++
             update()
         case 11:
-        questionBody=0
-        update()
+            questionBody = 0
+            update()
         default:
             break;
     }
@@ -321,8 +321,9 @@ $(document).on("click", "#answer1", function () {
 $(document).on("click", "#answer2", function () {
     switch (questionBody) {
         case 1:
-            questionBody++
             wrong++
+            wrongAnswer()
+            questionBody++
             update()
             break;
         case 2:
