@@ -259,24 +259,24 @@ $(document).on("click", "#answer1", function () {
         case 2:
             timerTime = 15
             questionBody++
-            update()
             wrongAnswer()
+            update()
             wrong++
             break;
 
         case 3:
             timerTime = 15
             questionBody++
-            update()
-            wrong++
             wrongAnswer()
+            wrong++
+            update()
             break;
         case 4:
             timerTime = 15
             questionBody++
-            update()
-            correct++
             correctAnswer()
+            correct++
+            update()
             break;
 
         case 5:
@@ -290,15 +290,16 @@ $(document).on("click", "#answer1", function () {
         case 6:
             timerTime = 15
             questionBody++
-            update()
-            wrongAnswer()
             wrong++
+            wrongAnswer()
+            update()
+            break;
         case 7:
             timerTime = 15
             questionBody++
-            update()
             wrongAnswer()
             wrong++
+            update()
             break;
 
         case 8:
@@ -365,7 +366,7 @@ $(document).on("click", "#answer2", function () {
             update()
             break;
 
-            case 5:
+        case 5:
             wrong++
             wrongAnswer()
             timerTime = 15
@@ -379,7 +380,7 @@ $(document).on("click", "#answer2", function () {
             update()
             break;
 
-            case 7:
+        case 7:
             wrong++
             wrongAnswer()
             timerTime = 15
@@ -387,7 +388,7 @@ $(document).on("click", "#answer2", function () {
             update()
             break;
 
-            case 8:
+        case 8:
             wrong++
             wrongAnswer()
             timerTime = 15
@@ -395,7 +396,7 @@ $(document).on("click", "#answer2", function () {
             update()
             break;
 
-            case 9:
+        case 9:
             wrong++
             wrongAnswer()
             timerTime = 15
@@ -403,7 +404,7 @@ $(document).on("click", "#answer2", function () {
             update()
             break;
 
-            case 10:
+        case 10:
             wrong++
             wrongAnswer()
             timerTime = 15
@@ -411,7 +412,7 @@ $(document).on("click", "#answer2", function () {
             update()
             break;
 
-            case 11:
+        case 11:
         default:
             break;
     }
@@ -439,7 +440,7 @@ $(document).on("click", "#answer3", function () {
             update()
             break;
 
-            case 4:
+        case 4:
             wrong++
             wrongAnswer()
             timerTime = 15
@@ -447,7 +448,7 @@ $(document).on("click", "#answer3", function () {
             update()
             break;
 
-            case 5:
+        case 5:
             correct++
             correctAnswer()
             timerTime = 15
@@ -455,7 +456,7 @@ $(document).on("click", "#answer3", function () {
             update()
             break;
 
-            case 6:
+        case 6:
             wrong++
             wrongAnswer()
             timerTime = 15
@@ -463,7 +464,7 @@ $(document).on("click", "#answer3", function () {
             update()
             break;
 
-            case 7:
+        case 7:
             correct++
             correctAnswer()
             timerTime = 15
@@ -471,7 +472,7 @@ $(document).on("click", "#answer3", function () {
             update()
             break;
 
-            case 8:
+        case 8:
             wrong++
             wrongAnswer()
             timerTime = 15
@@ -479,7 +480,7 @@ $(document).on("click", "#answer3", function () {
             update()
             break;
 
-            case 9:
+        case 9:
             correct++
             correctAnswer()
             timerTime = 15
@@ -487,7 +488,7 @@ $(document).on("click", "#answer3", function () {
             update()
             break;
 
-            case 10:
+        case 10:
             wrong++
             wrongAnswer()
             timerTime = 15
@@ -495,7 +496,7 @@ $(document).on("click", "#answer3", function () {
             update()
             break;
 
-            case 11:
+        case 11:
         default:
             break;
     }
@@ -511,6 +512,7 @@ $(document).on("click", "#answer4", function () {
             break;
         case 2:
             correct++
+            correctAnswer()
             timerTime = 15
             questionBody++
             update()
@@ -523,7 +525,7 @@ $(document).on("click", "#answer4", function () {
             update()
             break;
 
-            case 4:
+        case 4:
             wrong++
             wrongAnswer()
             timerTime = 15
@@ -531,13 +533,7 @@ $(document).on("click", "#answer4", function () {
             update()
             break;
 
-            case 5:
-            timerTime = 15
-            questionBody++
-            update()
-            break;
-
-            case 6:
+        case 5:
             wrong++
             wrongAnswer()
             timerTime = 15
@@ -545,7 +541,7 @@ $(document).on("click", "#answer4", function () {
             update()
             break;
 
-            case 7:
+        case 6:
             wrong++
             wrongAnswer()
             timerTime = 15
@@ -553,7 +549,15 @@ $(document).on("click", "#answer4", function () {
             update()
             break;
 
-            case 8:
+        case 7:
+            wrong++
+            wrongAnswer()
+            timerTime = 15
+            questionBody++
+            update()
+            break;
+
+        case 8:
             correct++
             correctAnswer()
             timerTime = 15
@@ -561,7 +565,7 @@ $(document).on("click", "#answer4", function () {
             update()
             break;
 
-            case 9:
+        case 9:
             wrong++
             wrongAnswer()
             timerTime = 15
@@ -569,7 +573,7 @@ $(document).on("click", "#answer4", function () {
             update()
             break;
 
-            case 10:
+        case 10:
             wrong++
             wrongAnswer()
             timerTime = 15
