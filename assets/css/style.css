@@ -15,7 +15,7 @@
 }
 
 body {
-    background-image: url("/assets/images/cool-background.png");
+    background-image: url("./assets/images/cool-background.png");
     background-repeat: no-repeat;
     background-size: 100%, 100%
 }
