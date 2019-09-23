@@ -5,13 +5,13 @@ var wrong = 0
 // var counter = 0
 
 var timeInterval = window.setInterval(function () {
-    timerTime--
+    // timerTime--
     document.getElementById('timer').innerHTML = timerTime
 
     if (timerTime === 0 && questionBody === 0) {
         console.log("Test")
         clearTimeout(timeInterval)
-    } else if (questionBody === 11) {
+    } else if (questionBody === 11 && timerTime === 0) {
         console.log("Test")
         alert("Number of correct guesses " + correct + " Number of wrong guesses " + wrong)
         clearTimeout(timeInterval)
@@ -19,9 +19,12 @@ var timeInterval = window.setInterval(function () {
     else if (timerTime === 0 && questionBody !== 0) {
         questionBody++
         timerTime = 15
+        console.log("This is a test")
         wrong++
-        startTimer(timeInterval)
         update()
+    }
+    if (questionBody != 0) {
+        timerTime--
     }
 }, 1000);
 
@@ -245,7 +248,6 @@ $(document).on("click", "#answer1", function () {
             //     }
             // }, 1000);
             timerTime = 15
-            setInterval(timeInterval, 1000)
             questionBody++
             update()
             break;
