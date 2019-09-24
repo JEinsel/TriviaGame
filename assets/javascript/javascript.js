@@ -255,13 +255,13 @@ $(document).on("click", "#answer1", function () {
             correctAnswer()
             timerTime = 15
             questionBody++
-            update()
             correct++
+            update()
             break;
         case 2:
             timerTime = 15
             questionBody++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - 1")
             update()
             wrong++
             break;
@@ -269,6 +269,7 @@ $(document).on("click", "#answer1", function () {
         case 3:
             timerTime = 15
             questionBody++
+            alert("Wrong answer, correct answer - Wassily Kandinsky")
             wrongAnswer()
             wrong++
             update()
@@ -284,29 +285,29 @@ $(document).on("click", "#answer1", function () {
         case 5:
             timerTime = 15
             questionBody++
-            update()
-            wrongAnswer()
+            alert("Wrong answer, correct answer - Elizabeth Peyton")
             wrong++
+            update()
             break;
 
         case 6:
             timerTime = 15
             questionBody++
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer 100,000 years old")
             update()
             break;
         case 7:
             timerTime = 15
             questionBody++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - 12 years")
             wrong++
             update()
             break;
 
         case 8:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - Red")
             timerTime = 15
             questionBody++
             update()
@@ -314,7 +315,7 @@ $(document).on("click", "#answer1", function () {
 
         case 9:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - Tint")
             timerTime = 15
             questionBody++
             update()
@@ -343,18 +344,18 @@ $(document).on("click", "#answer2", function () {
     switch (questionBody) {
         case 1:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - Leondardo Da Vinci")
             questionBody++
             update()
             break;
         case 2:
-            wrongAnswer()
+            alert("Wrong answer, correct answer - 1")
             wrong++
             update()
             break
         case 3:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - Wassily Kandinsky")
             timerTime = 15
             questionBody++
             update()
@@ -362,7 +363,7 @@ $(document).on("click", "#answer2", function () {
 
         case 4:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - Michelangelo")
             timerTime = 15
             questionBody++
             update()
@@ -370,7 +371,7 @@ $(document).on("click", "#answer2", function () {
 
         case 5:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - Elizabeth Peyton")
             timerTime = 15
             questionBody++
             update()
@@ -384,7 +385,7 @@ $(document).on("click", "#answer2", function () {
 
         case 7:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - 12 years")
             timerTime = 15
             questionBody++
             update()
@@ -392,7 +393,7 @@ $(document).on("click", "#answer2", function () {
 
         case 8:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - Red")
             timerTime = 15
             questionBody++
             update()
@@ -400,7 +401,7 @@ $(document).on("click", "#answer2", function () {
 
         case 9:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - Tint")
             timerTime = 15
             questionBody++
             update()
@@ -408,7 +409,7 @@ $(document).on("click", "#answer2", function () {
 
         case 10:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - Pablo Picasso")
             timerTime = 15
             questionBody++
             update()
@@ -423,6 +424,8 @@ $(document).on("click", "#answer2", function () {
 $(document).on("click", "#answer3", function () {
     switch (questionBody) {
         case 1:
+            alert("Wrong answer, correct answer - Leondardo Da Vinci")
+
             questionBody++
             wrong++
             update()
@@ -430,6 +433,8 @@ $(document).on("click", "#answer3", function () {
 
 
         case 2:
+            alert("Wrong answer, correct answer - 1")
+
             timerTime = 15
             questionBody++
             update()
@@ -444,7 +449,7 @@ $(document).on("click", "#answer3", function () {
 
         case 4:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - Michelangelo")
             timerTime = 15
             questionBody++
             update()
@@ -460,7 +465,7 @@ $(document).on("click", "#answer3", function () {
 
         case 6:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer 100,000 years old")
             timerTime = 15
             questionBody++
             update()
@@ -476,7 +481,7 @@ $(document).on("click", "#answer3", function () {
 
         case 8:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - Red")
             timerTime = 15
             questionBody++
             update()
@@ -492,7 +497,7 @@ $(document).on("click", "#answer3", function () {
 
         case 10:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - Pablo Picasso")
             timerTime = 15
             questionBody++
             update()
@@ -507,7 +512,7 @@ $(document).on("click", "#answer3", function () {
 $(document).on("click", "#answer4", function () {
     switch (questionBody) {
         case 1:
-            wrongAnswer()
+            alert("Wrong answer, correct answer - Leondardo Da Vinci")
             questionBody++
             wrong++
             update()
@@ -520,7 +525,7 @@ $(document).on("click", "#answer4", function () {
             update()
             break
         case 3:
-            wrongAnswer()
+            alert("Wrong answer, correct answer - Wassily Kandinsky")
             wrong++
             timerTime = 15
             questionBody++
@@ -529,7 +534,7 @@ $(document).on("click", "#answer4", function () {
 
         case 4:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - Michelangelo")
             timerTime = 15
             questionBody++
             update()
@@ -537,7 +542,7 @@ $(document).on("click", "#answer4", function () {
 
         case 5:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - Elizabeth Peyton")
             timerTime = 15
             questionBody++
             update()
@@ -545,7 +550,7 @@ $(document).on("click", "#answer4", function () {
 
         case 6:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer 100,000 years old")
             timerTime = 15
             questionBody++
             update()
@@ -553,7 +558,7 @@ $(document).on("click", "#answer4", function () {
 
         case 7:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - 12 years")
             timerTime = 15
             questionBody++
             update()
@@ -569,7 +574,7 @@ $(document).on("click", "#answer4", function () {
 
         case 9:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - Tint")
             timerTime = 15
             questionBody++
             update()
@@ -577,7 +582,7 @@ $(document).on("click", "#answer4", function () {
 
         case 10:
             wrong++
-            wrongAnswer()
+            alert("Wrong answer, correct answer - Pablo Picasso")
             timerTime = 15
             questionBody++
             update()
