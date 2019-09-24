@@ -330,6 +330,7 @@ $(document).on("click", "#answer1", function () {
             break;
 
         case 11:
+            timerTime = 15
             questionBody = 0
             update()
             break;
